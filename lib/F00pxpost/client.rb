@@ -9,9 +9,11 @@ module F00pxpost
       @client = OAuth::AccessToken.new(oauth_consumer, token,secret)               
     end
 
-    def post_photo(file, title)
+    def post_photo(file, title, description, category)
       response = JSON.parse @client.post("/v1/photos", 
-                    {name: title, description: title, category: 1}).body
+                                         {name: title, 
+                                          description: description, 
+                                          category: category}).body
       
       upload_key = response["upload_key"]
       photo_id = response["photo"]["id"]
