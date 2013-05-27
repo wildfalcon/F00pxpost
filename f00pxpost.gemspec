@@ -16,8 +16,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = F00pxpost::VERSION
   
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
   gem.add_runtime_dependency "rest-client"
   gem.add_runtime_dependency "json"
   gem.add_runtime_dependency "oauth"
