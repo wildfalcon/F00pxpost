@@ -31,11 +31,10 @@ Then create a client with
 
 ```ruby
 client = F00pxpost::Client.new(<token>, <token_secret>)
-client.create_set("Title")
-client.upload_photo(file, "Self Portrait")	
-
+client.post_photo(file, "Self Portrait", "This is a self portrait", 7)	
 ```
 
+The last argument is the category id (https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories)
 
 ## Contributing
 
