@@ -2,10 +2,10 @@
 require File.expand_path('../lib/f00pxpost/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["TODO: Write your name"]
+  gem.authors       = ["Laurie Young"]
   gem.email         = ["laurie@wildfalcon.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{500px Poster}
+  gem.summary       = %q{Really simple abstraction for uploading photos to 500px}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
