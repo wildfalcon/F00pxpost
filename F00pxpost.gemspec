@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/f00pxpost/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require "f00pxpost/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Laurie Young"]
