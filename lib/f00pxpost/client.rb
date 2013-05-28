@@ -18,9 +18,9 @@ module F00pxpost
       upload_key = response["upload_key"]
       photo_id = response["photo"]["id"]
     
-      file.rewind
+
       response = RestClient.post 'https://api.500px.com/v1/upload', 
-                                  file: file, 
+                                  file: File.new(file.path), 
                                   photo_id: photo_id,
                                   upload_key: upload_key,
                                   consumer_key: F00pxpost.consumer_key,
