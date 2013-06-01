@@ -31,6 +31,11 @@ module F00pxpost
       {key: upload_key, id: photo_id}
     end
     
+    def delete_photo(id)
+      response = JSON.parse @client.delete("/v1/photos/#{id}").body      
+      raise response.to_s unless response["status"] == 200
+    end
+    
     def get_photo_data(id)
       response = JSON.parse @client.get("/v1/photos/#{id}").body
       {
