@@ -30,6 +30,17 @@ module F00pxpost
                     
       {key: upload_key, id: photo_id}
     end
+    
+    def get_photo_data(id)
+      response = JSON.parse @client.get("/v1/photos/#{id}")
+      {
+        name: response["name"],
+        rating: response["rating"],
+        votes_count: response["votes_count"],
+        favorites_count: response["favorites_count"],
+        comments_count: response["comments_count"],
+      }
+    end
         
     def oauth_consumer
       @oauth_consumer ||= begin 
