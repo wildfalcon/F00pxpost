@@ -34,11 +34,11 @@ module F00pxpost
     def get_photo_data(id)
       response = JSON.parse @client.get("/v1/photos/#{id}").body
       {
-        name: response["name"],
-        rating: response["rating"],
-        votes_count: response["votes_count"],
-        favorites_count: response["favorites_count"],
-        comments_count: response["comments_count"],
+        name: response["photo"]["name"],
+        rating: response["photo"]["rating"],
+        votes_count: response["photo"]["votes_count"],
+        favorites_count: response["photo"]["favorites_count"],
+        comments_count: response["photo"]["comments_count"]
       }
     end
         
