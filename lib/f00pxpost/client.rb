@@ -32,7 +32,7 @@ module F00pxpost
     end
     
     def get_photo_data(id)
-      response = JSON.parse @client.get("/v1/photos/#{id}")
+      response = JSON.parse @client.get("/v1/photos/#{id}").body
       {
         name: response["name"],
         rating: response["rating"],
